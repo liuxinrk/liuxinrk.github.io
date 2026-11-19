@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+<defs>
+<g id="copepod">
+      <path d="M0,-26C10,-26 13,-12 12,0C11,10 7,16 0,17C-7,16 -11,10 -12,0C-13,-12 -10,-26 0,-26Z"/>
+      <path d="M-11.5,-7Q0,-4 11.5,-7M-11.5,2Q0,5 11.5,2M-9,10Q0,12.5 9,10"/>
+      <path d="M-3,17L-2.4,32L2.4,32L3,17M-2.4,23H2.4M-2.4,28H2.4"/>
+      <path d="M-2,32L-8,45M-1,32L-3.5,47M1,32L3.5,47M2,32L8,45"/>
+      <path d="M-4,-24C-18,-36 -42,-32 -62,-12M4,-24C18,-36 42,-32 62,-12"/>
+      <path d="M-11,4L-19,11M-10,8L-17,16M11,4L19,11M10,8L17,16"/>
+      <circle cx="0" cy="-19" r="1.6" fill="#fff" stroke="none"/></g><g id="centric">
+      <circle r="18"/><circle r="12.5"/><circle r="3.5"/>
+      <path d="M3.5,0.0L12.5,0.0M3.0,1.7L10.8,6.2M1.8,3.0L6.3,10.8M0.0,3.5L0.0,12.5M-1.7,3.0L-6.2,10.8M-3.0,1.7L-10.8,6.2M-3.5,0.0L-12.5,0.0M-3.0,-1.7L-10.8,-6.2M-1.8,-3.0L-6.3,-10.8M-0.0,-3.5L-0.0,-12.5M1.8,-3.0L6.3,-10.8M3.0,-1.8L10.8,-6.3M12.4,1.6L17.8,2.3M11.5,4.8L16.6,6.9M9.9,7.6L14.3,11.0M7.6,9.9L11.0,14.3M4.8,11.5L6.9,16.6M1.6,12.4L2.3,17.8M-1.6,12.4L-2.3,17.8M-4.8,11.5L-6.9,16.6M-7.6,9.9L-11.0,14.3M-9.9,7.6L-14.3,11.0M-11.5,4.8L-16.6,6.9M-12.4,1.6L-17.8,2.3M-12.4,-1.6L-17.8,-2.3M-11.5,-4.8L-16.6,-6.9M-9.9,-7.6L-14.3,-11.0M-7.6,-9.9L-11.0,-14.3M-4.8,-11.5L-6.9,-16.6M-1.6,-12.4L-2.3,-17.8M1.6,-12.4L2.3,-17.8M4.8,-11.5L6.9,-16.6M7.6,-9.9L11.0,-14.3M9.9,-7.6L14.3,-11.0M11.5,-4.8L16.6,-6.9M12.4,-1.6L17.8,-2.3"/></g><g id="radiolarian">
+      <circle r="9"/><circle r="15" stroke-dasharray="2.2 2.2"/>
+      <path d="M15.0,0.0L31.0,0.0M13.5,6.5L27.9,13.5M9.4,11.7L19.3,24.2M3.3,14.6L6.9,30.2M-3.3,14.6L-6.9,30.2M-9.4,11.7L-19.3,24.2M-13.5,6.5L-27.9,13.5M-15.0,0.0L-31.0,0.0M-13.5,-6.5L-27.9,-13.5M-9.4,-11.7L-19.3,-24.2M-3.3,-14.6L-6.9,-30.2M3.3,-14.6L6.9,-30.2M9.4,-11.7L19.3,-24.2M13.5,-6.5L27.9,-13.5M8.8,1.8L14.7,3.0M4.1,8.0L6.8,13.4M-3.7,8.2L-6.2,13.7M-8.7,2.2L-14.5,3.7M-7.2,-5.4L-12.0,-9.1M-0.2,-9.0L-0.4,-15.0M6.9,-5.8L11.5,-9.6"/></g><g id="ceratium">
+      <path d="M-9,-4C-9,-14 9,-14 9,-4L9,6C9,11 -9,11 -9,6Z"/>
+      <path d="M-9,1Q0,4.5 9,1"/>
+      <path d="M-2.5,-13L0,-52L2.5,-13"/>
+      <path d="M-7,9L-14,40L-4,10M6,9L11,32L8.5,9"/></g><g id="pennate">
+      <ellipse rx="32" ry="6.5"/><path d="M-27,0H27"/>
+      <path d="M-24,-5.2V-1.5M-24,1.5V5.2M-20,-5.2V-1.5M-20,1.5V5.2M-16,-5.2V-1.5M-16,1.5V5.2M-12,-5.2V-1.5M-12,1.5V5.2M-8,-5.2V-1.5M-8,1.5V5.2M-4,-5.2V-1.5M-4,1.5V5.2M0,-5.2V-1.5M0,1.5V5.2M4,-5.2V-1.5M4,1.5V5.2M8,-5.2V-1.5M8,1.5V5.2M12,-5.2V-1.5M12,1.5V5.2M16,-5.2V-1.5M16,1.5V5.2M20,-5.2V-1.5M20,1.5V5.2M24,-5.2V-1.5M24,1.5V5.2"/></g><g id="chain"><ellipse cx="-27" rx="6" ry="8.5"/><ellipse cx="-9" rx="6" ry="8.5"/><ellipse cx="9" rx="6" ry="8.5"/><ellipse cx="27" rx="6" ry="8.5"/><path d="M-21,-2H-15M-21,2H-15M-3,-2H3M-3,2H3M15,-2H21M15,2H21"/></g><g id="daphnia">
+      <path d="M-14,-10C-6,-22 18,-20 22,-4C25,10 14,22 0,20C-10,19 -16,8 -14,-10Z"/>
+      <path d="M22,8L36,22"/>
+      <path d="M-14,-10C-22,-14 -26,-6 -20,-2C-17,0 -14,-2 -14,-4"/>
+      <circle cx="-19" cy="-8" r="2.4" fill="#fff" stroke="none"/>
+      <path d="M-12,-14C-22,-26 -34,-30 -44,-26M-30,-29L-36,-38M-38,-27L-46,-32"/>
+      <path d="M-4,-4C2,4 8,6 14,2"/></g>
+</defs>
+<g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+  <use href="#copepod" transform="translate(150 120) rotate(-18) scale(1.15)" opacity="0.22" stroke-width="1.13"/>
+  <use href="#copepod" transform="translate(560 330) rotate(140) scale(0.8)" opacity="0.16" stroke-width="1.62"/>
+  <use href="#copepod" transform="translate(420 70) rotate(35) scale(0.55)" opacity="0.14" stroke-width="2.36"/>
+  <use href="#centric" transform="translate(330 230) rotate(0) scale(1.0)" opacity="0.2" stroke-width="1.30"/>
+  <use href="#centric" transform="translate(650 90) rotate(0) scale(0.6)" opacity="0.15" stroke-width="2.17"/>
+  <use href="#centric" transform="translate(90 400) rotate(0) scale(0.7)" opacity="0.14" stroke-width="1.86"/>
+  <use href="#radiolarian" transform="translate(520 170) rotate(10) scale(0.9)" opacity="0.17" stroke-width="1.44"/>
+  <use href="#radiolarian" transform="translate(250 410) rotate(0) scale(0.6)" opacity="0.13" stroke-width="2.17"/>
+  <use href="#ceratium" transform="translate(420 360) rotate(25) scale(0.9)" opacity="0.17" stroke-width="1.44"/>
+  <use href="#ceratium" transform="translate(80 230) rotate(-30) scale(0.6)" opacity="0.13" stroke-width="2.17"/>
+  <use href="#pennate" transform="translate(640 230) rotate(-35) scale(0.9)" opacity="0.16" stroke-width="1.44"/>
+  <use href="#pennate" transform="translate(260 60) rotate(20) scale(0.7)" opacity="0.13" stroke-width="1.86"/>
+  <use href="#chain" transform="translate(160 300) rotate(15) scale(0.9)" opacity="0.15" stroke-width="1.44"/>
+  <use href="#chain" transform="translate(600 420) rotate(-20) scale(0.7)" opacity="0.12" stroke-width="1.86"/>
+  <use href="#daphnia" transform="translate(350 130) rotate(-10) scale(0.75)" opacity="0.14" stroke-width="1.73"/>
+  <use href="#daphnia" transform="translate(690 340) rotate(15) scale(0.55)" opacity="0.12" stroke-width="2.36"/>
+</g>
+<g fill="#fff">
+  <circle cx="40" cy="40" r="1.6" opacity="0.18"/>
+  <circle cx="210" cy="200" r="1.2" opacity="0.16"/>
+  <circle cx="300" cy="330" r="1.8" opacity="0.14"/>
+  <circle cx="470" cy="260" r="1.3" opacity="0.18"/>
+  <circle cx="500" cy="450" r="1.5" opacity="0.15"/>
+  <circle cx="690" cy="170" r="1.2" opacity="0.16"/>
+  <circle cx="580" cy="40" r="1.8" opacity="0.14"/>
+  <circle cx="120" cy="470" r="1.3" opacity="0.15"/>
+  <circle cx="390" cy="450" r="1.1" opacity="0.17"/>
+  <circle cx="30" cy="330" r="1.4" opacity="0.14"/>
+  <circle cx="240" cy="140" r="1" opacity="0.2"/>
+  <circle cx="610" cy="300" r="1" opacity="0.18"/>
+  <circle cx="450" cy="10" r="1.3" opacity="0.14"/>
+  <circle cx="700" cy="470" r="1.2" opacity="0.15"/>
+  <circle cx="330" cy="20" r="1" opacity="0.16"/>
+</g>
+</svg>

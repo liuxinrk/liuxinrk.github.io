@@ -41,13 +41,21 @@ a:hover { text-decoration: underline; }
 
 /* hero */
 .hero {
+  position: relative; overflow: hidden; isolation: isolate;
   color: #eaf6f4;
   background:
-    radial-gradient(circle at 12% 20%, rgba(255,255,255,.10) 0 2px, transparent 3px) 0 0 / 46px 46px,
-    radial-gradient(circle at 70% 60%, rgba(255,255,255,.07) 0 1.5px, transparent 2.5px) 0 0 / 31px 31px,
-    linear-gradient(135deg, var(--hero-1), var(--hero-2));
+    radial-gradient(ellipse 70% 90% at 25% -20%, rgba(180, 240, 225, .18), transparent 70%),
+    radial-gradient(ellipse 60% 70% at 100% 120%, rgba(0, 20, 25, .35), transparent 70%),
+    linear-gradient(160deg, var(--hero-1), var(--hero-2));
   padding: 56px 0;
 }
+.hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: url("plankton.svg") 0 0 / 720px 480px;
+  animation: plankton-drift 140s linear infinite;
+}
+@keyframes plankton-drift { to { background-position: 720px -480px; } }
+@media (prefers-reduced-motion: reduce) { .hero::before { animation: none; } }
 .hero-grid { display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: center; }
 .motto { margin: 0 0 18px; font-size: 1.05rem; color: #bfe5df; }
 .motto span { font-size: .9rem; letter-spacing: .02em; }
