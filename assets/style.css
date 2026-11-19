@@ -44,18 +44,28 @@ a:hover { text-decoration: underline; }
   position: relative; overflow: hidden; isolation: isolate;
   color: #eaf6f4;
   background:
-    radial-gradient(ellipse 70% 90% at 25% -20%, rgba(180, 240, 225, .18), transparent 70%),
-    radial-gradient(ellipse 60% 70% at 100% 120%, rgba(0, 20, 25, .35), transparent 70%),
-    linear-gradient(160deg, var(--hero-1), var(--hero-2));
+    conic-gradient(from 148deg at 18% -40%, transparent 0deg, rgba(210,255,240,.06) 6deg, transparent 12deg,
+      transparent 18deg, rgba(210,255,240,.045) 22deg, transparent 28deg, transparent 36deg,
+      rgba(210,255,240,.035) 41deg, transparent 48deg, transparent 360deg),
+    radial-gradient(ellipse 75% 95% at 22% -25%, rgba(170,240,222,.20), transparent 70%),
+    radial-gradient(ellipse 70% 80% at 100% 125%, rgba(0,18,22,.45), transparent 70%),
+    linear-gradient(165deg, #0d4646, #0a3536 55%, #082c2e);
   padding: 56px 0;
 }
+/* marine snow: slowly sinking particles */
 .hero::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
-  background: url("plankton.svg") 0 0 / 720px 480px;
-  animation: plankton-drift 140s linear infinite;
+  background: url("marine-snow.svg") 0 0 / 600px 600px;
+  animation: snow-sink 150s linear infinite;
 }
-@keyframes plankton-drift { to { background-position: 720px -480px; } }
-@media (prefers-reduced-motion: reduce) { .hero::before { animation: none; } }
+/* faint radiolarian in the lower-left corner */
+.hero::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  width: 560px; aspect-ratio: 1; left: -210px; bottom: -260px;
+  background: url("radiolarian.svg") center / contain no-repeat;
+  opacity: .32;
+}
+@keyframes snow-sink { to { background-position: 0 600px; } }
 .hero-grid { display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: center; }
 .motto { margin: 0 0 18px; font-size: 1.05rem; color: #bfe5df; }
 .motto span { font-size: .9rem; letter-spacing: .02em; }
@@ -70,7 +80,19 @@ a:hover { text-decoration: underline; }
 .btn:hover { text-decoration: none; background: #d9f3ee; }
 .btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.6); }
 .btn-ghost:hover { background: rgba(255,255,255,.12); }
-.portrait { width: 300px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 5px solid rgba(255,255,255,.85); box-shadow: 0 16px 40px rgba(0,0,0,.25); }
+.portrait-wrap { position: relative; justify-self: center; }
+/* centric diatom frustule framing the portrait */
+.portrait-wrap::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  left: 50%; top: 50%; width: 214%; aspect-ratio: 1;
+  background: url("diatom.svg") center / contain no-repeat;
+  opacity: .5;
+  transform: translate(-50%, -50%);
+  animation: diatom-turn 420s linear infinite;
+}
+@keyframes diatom-turn { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .hero::before, .portrait-wrap::before { animation: none; } }
+.portrait { display: block; width: 300px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 5px solid rgba(255,255,255,.85); box-shadow: 0 16px 40px rgba(0,0,0,.3); }
 
 /* page head (inner pages) */
 .page-head { background: linear-gradient(135deg, var(--hero-1), var(--hero-2)); color: #fff; padding: 36px 0; }
@@ -132,7 +154,9 @@ details[open] summary { margin-bottom: 6px; }
   .site-nav { margin-inline: -16px; padding-inline: 12px; }
   .hero { padding: 36px 0; }
   .hero-grid { grid-template-columns: 1fr; gap: 24px; }
-  .portrait { width: 180px; order: -1; }
+  .portrait-wrap { order: -1; justify-self: start; }
+  .portrait { width: 180px; }
+  .hero::after { width: 420px; left: auto; right: -200px; bottom: -180px; }
   .card { padding: 20px 18px; }
   .contact-grid { grid-template-columns: 1fr; gap: 12px; }
   .timeline li { grid-template-columns: 1fr; gap: 0; }
