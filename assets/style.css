@@ -61,8 +61,8 @@ a:hover { text-decoration: underline; }
 @keyframes snow-sink { to { background-position: 0 600px; } }
 @media (prefers-reduced-motion: reduce) { .hero::before { animation: none; } }
 .hero-grid { display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: center; }
-.motto { margin: 0 0 18px; font-size: 1.05rem; color: #bfe5df; }
-.motto span { font-size: .9rem; letter-spacing: .02em; }
+.motto { margin: 0 0 22px; font-size: clamp(1.25rem, 2.6vw, 1.5rem); line-height: 1.5; font-weight: 500; color: #d3f1ec; }
+.motto span { font-size: clamp(1rem, 1.9vw, 1.15rem); font-weight: 400; letter-spacing: .02em; color: #bfe5df; }
 .hero h1 { margin: 0; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; color: #fff; }
 .alias { font-weight: 400; color: #bfe5df; font-size: .6em; }
 .names { margin: 6px 0 18px; display: flex; gap: 16px; font-size: 1.25rem; color: #d6efeb; }
