@@ -58,14 +58,8 @@ a:hover { text-decoration: underline; }
   background: url("marine-snow.svg") 0 0 / 600px 600px;
   animation: snow-sink 150s linear infinite;
 }
-/* faint radiolarian in the lower-left corner */
-.hero::after {
-  content: ""; position: absolute; z-index: -1; pointer-events: none;
-  width: 560px; aspect-ratio: 1; left: -210px; bottom: -260px;
-  background: url("radiolarian.svg") center / contain no-repeat;
-  opacity: .32;
-}
 @keyframes snow-sink { to { background-position: 0 600px; } }
+@media (prefers-reduced-motion: reduce) { .hero::before { animation: none; } }
 .hero-grid { display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: center; }
 .motto { margin: 0 0 18px; font-size: 1.05rem; color: #bfe5df; }
 .motto span { font-size: .9rem; letter-spacing: .02em; }
@@ -80,18 +74,7 @@ a:hover { text-decoration: underline; }
 .btn:hover { text-decoration: none; background: #d9f3ee; }
 .btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.6); }
 .btn-ghost:hover { background: rgba(255,255,255,.12); }
-.portrait-wrap { position: relative; justify-self: center; }
-/* centric diatom frustule framing the portrait */
-.portrait-wrap::before {
-  content: ""; position: absolute; z-index: -1; pointer-events: none;
-  left: 50%; top: 50%; width: 214%; aspect-ratio: 1;
-  background: url("diatom.svg") center / contain no-repeat;
-  opacity: .5;
-  transform: translate(-50%, -50%);
-  animation: diatom-turn 420s linear infinite;
-}
-@keyframes diatom-turn { to { transform: translate(-50%, -50%) rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .hero::before, .portrait-wrap::before { animation: none; } }
+.portrait-wrap { justify-self: center; }
 .portrait { display: block; width: 300px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 5px solid rgba(255,255,255,.85); box-shadow: 0 16px 40px rgba(0,0,0,.3); }
 
 /* page head (inner pages) */
@@ -156,7 +139,6 @@ details[open] summary { margin-bottom: 6px; }
   .hero-grid { grid-template-columns: 1fr; gap: 24px; }
   .portrait-wrap { order: -1; justify-self: start; }
   .portrait { width: 180px; }
-  .hero::after { width: 420px; left: auto; right: -200px; bottom: -180px; }
   .card { padding: 20px 18px; }
   .contact-grid { grid-template-columns: 1fr; gap: 12px; }
   .timeline li { grid-template-columns: 1fr; gap: 0; }
