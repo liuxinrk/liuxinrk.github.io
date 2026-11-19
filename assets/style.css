@@ -114,12 +114,6 @@ details[open] summary { margin-bottom: 6px; }
 .cols { display: flex; gap: 12px; flex-wrap: wrap; }
 .cols .col { flex: 1 1 220px; min-width: 0; }
 
-/* tutorial */
-.video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-.video { margin: 0; }
-.frame { position: relative; aspect-ratio: 16 / 9; background: #0b3b3c; border-radius: 10px; overflow: hidden; }
-.frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.video figcaption { margin-top: 8px; font-size: .92rem; }
 
 /* footer */
 .site-footer { border-top: 1px solid var(--line); background: var(--surface); color: var(--muted); font-size: .85rem; padding: 18px 0; }
