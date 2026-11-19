@@ -135,3 +135,4 @@ details[open] summary { margin-bottom: 6px; }
   .contact-grid { grid-template-columns: 1fr; gap: 12px; }
   .timeline li { grid-template-columns: 1fr; gap: 0; }
 }
+.count { display: inline-block; margin-left: 6px; padding: 0 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: .85rem; font-weight: 600; vertical-align: middle; }
