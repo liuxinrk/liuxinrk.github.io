@@ -124,8 +124,6 @@ details[open] summary { margin-bottom: 6px; }
 .post > h2 { margin-top: 2px; }
 .toc summary { margin: 0; }
 .toc .timeline { margin-top: 10px; }
-.cols { display: flex; gap: 12px; flex-wrap: wrap; }
-.cols .col { flex: 1 1 220px; min-width: 0; }
 
 
 /* footer */
@@ -149,16 +147,17 @@ details[open] summary { margin-bottom: 6px; }
 .social a:hover { background: rgba(255,255,255,.2); color: #fff; text-decoration: none; }
 .social svg { flex: none; }
 
-/* photo gallery in blog posts */
+/* blog images: single framed figure, or justified equal-height gallery rows */
 .post-meta { color: var(--muted); font-size: .9rem; margin-top: -6px !important; }
-.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-flow: dense; gap: 10px; margin: 18px 0 4px; }
-.gallery a { position: relative; display: block; overflow: hidden; border-radius: 10px; background: var(--accent-soft); }
-.prose .gallery img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; margin: 0; border-radius: 0; object-fit: cover; transition: transform .35s ease; }
-.gallery a:hover img { transform: scale(1.03); }
-.gallery .full { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
-.gallery .tall { aspect-ratio: 3 / 4; }
-.gallery .wide { grid-column: span 2; }
+.single { margin: 18px 0 6px; text-align: center; }
+.single a { display: inline-block; max-width: 100%; border-radius: 10px; }
+.prose .single img { display: block; max-width: 100%; max-height: 620px; width: auto; height: auto; margin: 0; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(16, 50, 48, .08); }
+.gallery { display: flex; flex-direction: column; gap: 8px; margin: 18px 0 6px; }
+.g-row { display: flex; align-items: flex-start; gap: 8px; width: 100%; max-width: calc(var(--s, 99) * 430px); margin-inline: auto; }
+.g-row > a { position: relative; flex: var(--a) 1 0%; aspect-ratio: var(--a); overflow: hidden; border-radius: 10px; background: var(--accent-soft); }
+.prose .g-row img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; margin: 0; border-radius: 0; object-fit: cover; transition: transform .35s ease; }
+.g-row > a:hover img { transform: scale(1.03); }
 @media (max-width: 760px) {
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-  .gallery .wide { aspect-ratio: 4 / 3; }
+  .gallery, .g-row { gap: 6px; }
+  .prose .single img { max-height: 460px; }
 }
