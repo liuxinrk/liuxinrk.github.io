@@ -309,11 +309,16 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .rcard .k { transition: color .2s ease; }
 .rcard:hover h3 { color: var(--primary-2); }
 
-.row { transition: background .18s ease, padding .18s ease; }
-.row:hover { background: var(--paper); padding-left: 16px; padding-right: 16px; }
+/* row hover: highlight bleeds outside the row and content slides as a block, so text never re-wraps */
+.row { position: relative; isolation: isolate; }
+.row::before { content: ""; position: absolute; z-index: -1; inset: 0 -16px; border-radius: 6px; background: var(--paper); opacity: 0; transition: opacity .18s ease; }
+.row:hover::before { opacity: 1; }
+.row > * { transition: transform .18s ease; }
+.row:hover > * { transform: translateX(8px); }
 .row .side a { transition: transform .18s ease; }
 .row:hover .side a { transform: translate(2px, -2px); }
-#talks .row, #talks .row:hover { transition: none; background: none; padding-left: 0; padding-right: 0; }
+#talks .row::before { display: none; }
+#talks .row:hover > * { transform: none; }
 
 .navy-card li { transition: padding .18s ease; }
 .navy-card li:hover { padding-left: 6px; }
@@ -337,7 +342,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
   .timeline li::before,   }
 @media (hover: none) {
-  .row:hover { padding-left: 0; padding-right: 0; }
+  .row::before { display: none; }
+  .row:hover > * { transform: none; }
 }
 
 /* research impact band */
