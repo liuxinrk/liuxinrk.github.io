@@ -52,27 +52,40 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); font-size: .82rem; font-weight: 600; color: var(--primary); }
 .pill:hover { border-color: var(--primary); text-decoration: none; }
 
-/* ============ hero ============ */
-.hero { position: relative; overflow: hidden; padding: 72px 0 84px; }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .85fr); gap: 56px; align-items: center; }
-.hero h1 { margin: 0; font: 400 clamp(2.4rem, 5.2vw, 3.9rem)/1.08 var(--serif); color: var(--primary); letter-spacing: -.01em; }
-.hero .motto-zh { margin: 18px 0 0; font: 400 clamp(1.15rem, 2vw, 1.4rem)/1.5 var(--serif); color: var(--primary); opacity: .85; }
-.hero .lead { margin: 22px 0 30px; max-width: 560px; font: 400 1.02rem/1.75 var(--serif); color: #3c4048; }
+/* ============ hero (dark water, light rays, sinking marine snow) ============ */
+.hero {
+  position: relative; overflow: hidden; isolation: isolate; padding: 76px 0 84px; color: #e4f1eb;
+  background:
+    conic-gradient(from 148deg at 18% -40%, transparent 0deg, rgba(210,255,230,.06) 6deg, transparent 12deg,
+      transparent 18deg, rgba(210,255,230,.045) 22deg, transparent 28deg, transparent 36deg,
+      rgba(210,255,230,.035) 41deg, transparent 48deg, transparent 360deg),
+    radial-gradient(ellipse 75% 95% at 22% -25%, rgba(170,240,205,.20), transparent 70%),
+    radial-gradient(ellipse 70% 80% at 100% 125%, rgba(0,16,10,.45), transparent 70%),
+    linear-gradient(165deg, #154a3b, #0f3a2d 55%, #0b2e24);
+}
+.hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: url("marine-snow.svg") 0 0 / 600px 600px;
+  animation: snow-sink 150s linear infinite;
+}
+@keyframes snow-sink { to { background-position: 0 600px; } }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 56px; align-items: center; }
+.hero .eyebrow { color: var(--gold-soft); }
+.hero h1 { margin: 0; font: 400 clamp(2.4rem, 5.2vw, 3.9rem)/1.08 var(--serif); color: #fff; letter-spacing: -.01em; }
+.hero .hl { color: var(--gold-soft); }
+.hero .motto-zh { margin: 18px 0 0; font: 400 clamp(1.15rem, 2vw, 1.4rem)/1.5 var(--serif); color: #d3ebe0; }
+.hero .lead { margin: 22px 0 30px; max-width: 580px; font: 400 1.02rem/1.75 var(--serif); color: #c9e2d6; }
 .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero-net { position: absolute; z-index: 0; top: -30px; right: 8%; width: 640px; max-width: 70%; opacity: .55; pointer-events: none; }
-.hero .wrap { position: relative; z-index: 1; }
-
-.arch { position: relative; margin: 0; justify-self: end; width: 100%; max-width: 400px; aspect-ratio: 4 / 4.5; border-radius: 200px 200px 22px 22px; overflow: hidden; background: var(--primary); box-shadow: 0 24px 60px rgba(16, 56, 44, .22); }
-.arch img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
-.arch::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, color-mix(in srgb, var(--primary) 92%, transparent) 100%); }
-.arch figcaption { position: absolute; z-index: 1; left: 26px; right: 26px; bottom: 22px; color: #fff; }
-.arch .role { margin: 0; font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-soft); }
-.arch .field { margin: 4px 0 2px; font: 400 1.45rem/1.25 var(--serif); }
-.arch .org { margin: 0; padding-right: 84px; font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; opacity: .85; }
-.arch .coords { position: absolute; right: 0; bottom: 0; text-align: right; font: .66rem/1.5 var(--mono); opacity: .8; }
+.hero .btn { background: #fff; border-color: #fff; color: var(--primary); }
+.hero .btn:hover { background: var(--gold-pale); border-color: var(--gold-pale); }
+.hero .btn-ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, .5); }
+.hero .btn-ghost:hover { background: rgba(255, 255, 255, .12); border-color: #fff; color: #fff; }
+.portrait-wrap { justify-self: center; }
+.portrait { display: block; width: 300px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 5px solid rgba(255, 255, 255, .85); box-shadow: 0 18px 44px rgba(0, 0, 0, .32); transition: transform .35s ease, box-shadow .35s ease; }
+.portrait:hover { transform: translateY(-4px); box-shadow: 0 26px 56px rgba(0, 0, 0, .38); }
 
 /* ============ metrics band ============ */
-.metrics { background: var(--primary); color: var(--primary-ink); }
+.metrics { background: var(--primary); color: var(--primary-ink); border-top: 1px solid rgba(255, 255, 255, .10); }
 .metrics .wrap { display: grid; grid-template-columns: 1.3fr repeat(4, 1fr); }
 .metrics .m-label, .metrics .m { padding: 30px 26px; border-left: 1px solid rgba(255, 255, 255, .14); }
 .metrics .m-label { border-left: 0; padding-left: 0; }
@@ -236,8 +249,9 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .site-nav a { padding: 10px 0; border-bottom: 1px solid var(--line); }
   .nav-toggle { display: block; }
   .hero-grid, .about-grid, .career-grid { grid-template-columns: 1fr; }
-  .arch { justify-self: start; max-width: 340px; }
-  .metrics .wrap { grid-template-columns: repeat(2, 1fr); }
+  .portrait-wrap { justify-self: start; order: -1; }
+  .portrait { width: 200px; }
+    .metrics .wrap { grid-template-columns: repeat(2, 1fr); }
   .metrics .m-label { grid-column: 1 / -1; padding: 26px 0 6px; }
   .metrics .m { border-left: 0; border-top: 1px solid rgba(255, 255, 255, .14); padding: 22px 0; }
   .sec-grid, .post { grid-template-columns: 1fr; gap: 14px; }
@@ -247,8 +261,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .wrap { width: min(var(--wrap), 100% - 32px); }
   .brand-sub { display: none; }
   .hero { padding: 44px 0 56px; }
-  .hero-net { display: none; }
-  .section { padding: 60px 0; }
+  .portrait { width: 160px; border-width: 4px; }
+    .section { padding: 60px 0; }
   .band-sec { padding: 48px 0; }
   .cards, .posts { grid-template-columns: 1fr; }
   .rcard { min-height: 0; }
@@ -302,10 +316,6 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .pcard { transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
 .pcard:hover { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 14px 30px rgba(16, 56, 44, .10); }
 
-.arch { transition: transform .35s ease, box-shadow .35s ease; }
-.arch:hover { transform: translateY(-4px); box-shadow: 0 30px 70px rgba(16, 56, 44, .28); }
-.arch img { transition: transform .6s ease; }
-.arch:hover img { transform: scale(1.03); }
 
 .timeline li::before { animation: dot-pulse 2.8s ease-in-out infinite; }
 .timeline li:nth-child(2)::before { animation-delay: .4s; }
@@ -318,18 +328,9 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   50% { transform: scale(1); box-shadow: 0 0 0 7px rgba(169, 133, 58, 0); }
 }
 
-/* hero network: slow drift, node pulses, travelling signals */
-.hero-net .drift { animation: net-drift 16s ease-in-out infinite; }
-.hero-net .signals line { stroke-dasharray: 6 94; animation: net-signal 9s linear infinite; }
-.hero-net .pulse { fill: none; stroke: #b59a5c; transform-box: fill-box; transform-origin: center; animation: net-pulse 5.6s ease-out infinite; }
-@keyframes net-drift { 0%, 100% { transform: translate(0, 0); } 35% { transform: translate(9px, -7px); } 70% { transform: translate(-6px, 8px); } }
-@keyframes net-signal { from { stroke-dashoffset: 100; opacity: .9; } to { stroke-dashoffset: 0; opacity: .9; } }
-@keyframes net-pulse { 0%, 70% { opacity: 0; transform: scale(.7); } 78% { opacity: .6; } 100% { opacity: 0; transform: scale(2.4); } }
 
 @media (prefers-reduced-motion: reduce) {
-  .timeline li::before, .hero-net .drift, .hero-net .signals line, .hero-net .pulse { animation: none !important; }
-  .hero-net .signals { display: none; }
-}
+  .timeline li::before,   }
 @media (hover: none) {
   .row:hover, .trows li:hover, .news li:hover { padding-left: 0; padding-right: 0; }
 }
