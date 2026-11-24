@@ -179,7 +179,7 @@ window.XL_DICT = {
 "about.title": "<span class=\"hl\">カイアシ類の生理</span>から、<br>プランクトン工学まで。",
 "about.bio1": "刘鑫（Xin Liu）博士は、中国・広西科学院 広西海洋科学院の研究員です。滋賀県立大学で博士（環境科学）の学位を取得しました。カイアシ類の生理・生態について15年以上の研究経験を持つカイアシ類研究者として知られています。この10年間は、気候変動や人間活動がプランクトンの個体群動態に及ぼす影響を中心に研究してきました。近年は、プランクトン工学、藻類培養技術、排水処理にも取り組んでいます。",
 "about.bio2": "これまで主に日本と中国で研究活動を行ってきました。研究の多くは、滋賀県立大学の伴修平教授、創価大学の戸田龍樹教授との共同研究です。研究成果は Limnology and Oceanography、Freshwater Biology、Journal of Plankton Research、Inland Waters、International Biodeterioration &amp; Biodegradation、Limnology などの生態学・環境科学分野の学術誌に掲載されています。2021年に日本プランクトン学会奨励賞、2022年に国際陸水学会（SIL）Wetzel Memorial Award および日本陸水学会国際交流奨励賞を受賞しました。研究活動の詳細は本ウェブサイト（https://liuxinrk.github.io）をご覧ください。",
-"about.more": "中国語の紹介（中文）",
+"about.more": "自我介绍（中文）",
 "about.honours": "受賞",
 "about.awards": "受賞歴",
 "award.1": "<span><span><a href=\"https://www.plankton.jp/sub11.html\" rel=\"noopener\" target=\"_blank\">日本プランクトン学会奨励賞</a></span><br/><small style=\"opacity:.75\">日本プランクトン学会</small></span><span class=\"yr\">2021</span>",
