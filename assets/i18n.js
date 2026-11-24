@@ -146,7 +146,12 @@ window.XL_DICT = {
 "blogp.title": "动态与<span class=\"hl\">随笔</span>",
 "blogp.count": "共 52 篇 · 2021–2026",
 "blogp.all": "全部文章（52）",
-"page.blog": "博客 | 刘鑫 Xin Liu"
+"page.blog": "博客 | 刘鑫 Xin Liu",
+"lang.eyebrow": "语言",
+"lang.title": "在中、日、英三个学术圈中交流与合作。",
+"lang.en": "英语",
+"lang.zh": "中文",
+"lang.ja": "日语"
 },
 "ja": {
 "nav.about": "プロフィール",
@@ -292,7 +297,12 @@ window.XL_DICT = {
 "blogp.title": "ニュースと<span class=\"hl\">記録</span>",
 "blogp.count": "全52件 · 2021–2026",
 "blogp.all": "すべての投稿（52）",
-"page.blog": "ブログ | 刘鑫 Xin Liu"
+"page.blog": "ブログ | 刘鑫 Xin Liu",
+"lang.eyebrow": "言語",
+"lang.title": "日・中・英、三つの研究コミュニティをつなぐ。",
+"lang.en": "英語",
+"lang.zh": "中国語",
+"lang.ja": "日本語"
 }
 };
 
