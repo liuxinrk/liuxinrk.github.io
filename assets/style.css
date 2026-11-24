@@ -345,3 +345,9 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (hover: none) {
   .row:hover, .trows li:hover, .news li:hover { padding-left: 0; padding-right: 0; }
 }
+
+/* research impact band */
+.metrics .m-label a { color: #fff; border-bottom: 1px solid rgba(255, 255, 255, .35); }
+.metrics .m-label a:hover { text-decoration: none; border-bottom-color: var(--gold-soft); }
+.metrics .m-label p { line-height: 1.7; }
+.metrics .since { display: block; margin-top: 4px; font: .72rem var(--mono); color: var(--gold-soft); opacity: .9; }
