@@ -315,10 +315,6 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .row:hover .side a { transform: translate(2px, -2px); }
 #talks .row:hover, .post .row:hover { background: var(--card); }
 
-.trows li { transition: background .18s ease, padding .18s ease; }
-.trows li:hover { background: rgba(255, 255, 255, .45); padding-left: 14px; padding-right: 14px; }
-.news li { transition: background .18s ease, padding .18s ease; }
-.news li:hover { background: var(--card); padding-left: 14px; padding-right: 14px; }
 .navy-card li { transition: padding .18s ease; }
 .navy-card li:hover { padding-left: 6px; }
 
@@ -341,7 +337,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
   .timeline li::before,   }
 @media (hover: none) {
-  .row:hover, .trows li:hover, .news li:hover { padding-left: 0; padding-right: 0; }
+  .row:hover { padding-left: 0; padding-right: 0; }
 }
 
 /* research impact band */
