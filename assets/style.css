@@ -383,3 +383,4 @@ html[lang="zh-CN"] .hl, html[lang="ja"] .hl { font-style: normal; }
 .lv i.on { background: var(--gold); }
 .lang-card .score { font: 700 .78rem var(--mono); color: var(--gold-soft); text-align: right; }
 .lang-card li:hover { padding-left: 0; }
+html[lang="ja"] .contact h2 { font-size: clamp(1.25rem, 4.6vw, 2.4rem); }
