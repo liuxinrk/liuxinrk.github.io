@@ -1,4 +1,12 @@
 (function () {
+  function T(key, vars, fallback) {
+    var i = window.XLi18n;
+    if (i) return i.t(key, vars, fallback);
+    return fallback.replace(/\{(\w+)\}/g, function (m, k) { return vars && vars[k] != null ? vars[k] : m; });
+  }
+  var renderers = [];
+  window.addEventListener('xl:lang', function () { renderers.forEach(function (f) { f(); }); });
+
   // mobile navigation
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.site-nav');
@@ -20,10 +28,12 @@
       items.forEach(function (li, i) { li.hidden = !expanded && i >= n; });
       if (button) {
         button.hidden = items.length <= n;
-        button.textContent = expanded ? 'Show fewer' : button.dataset.label;
+        button.textContent = expanded ? T('ui.showFewer', null, 'Show fewer')
+          : T(button.dataset.key || 'ui.showAll', { n: items.length }, button.dataset.label);
       }
     }
     if (button) button.addEventListener('click', function () { expanded = !expanded; render(); });
+    renderers.push(render);
     render();
     return { reset: function () { expanded = false; render(); } };
   }
@@ -50,12 +60,14 @@
         if (ok) shown++;
       });
       moreBtn.hidden = !!filtering || rows.length <= LIMIT;
-      moreBtn.textContent = expanded ? 'Show fewer' : moreBtn.dataset.label;
+      moreBtn.textContent = expanded ? T('ui.showFewer', null, 'Show fewer')
+        : T(moreBtn.dataset.key || 'ui.showAllPubs', { n: rows.length }, moreBtn.dataset.label);
       empty.hidden = shown !== 0;
     }
     q.addEventListener('input', apply);
     yearSel.addEventListener('change', apply);
     moreBtn.addEventListener('click', function () { expanded = !expanded; apply(); });
+    renderers.push(apply);
     apply();
   }
 
