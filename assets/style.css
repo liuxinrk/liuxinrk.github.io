@@ -313,7 +313,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .row:hover { background: var(--paper); padding-left: 16px; padding-right: 16px; }
 .row .side a { transition: transform .18s ease; }
 .row:hover .side a { transform: translate(2px, -2px); }
-#talks .row:hover, .post .row:hover { background: var(--card); }
+#talks .row, #talks .row:hover { transition: none; background: none; padding-left: 0; padding-right: 0; }
 
 .navy-card li { transition: padding .18s ease; }
 .navy-card li:hover { padding-left: 6px; }
