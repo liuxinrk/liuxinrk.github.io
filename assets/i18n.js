@@ -149,7 +149,8 @@ window.XL_DICT = {
 "lang.en": "英语",
 "lang.zh": "中文",
 "lang.ja": "日语",
-"band.honours": "<span class=\"n\">05</span>荣誉与奖项"
+"band.honours": "<span class=\"n\">05</span>荣誉与奖项",
+"ui.showAllProjects": "显示全部 {n} 个项目"
 },
 "ja": {
 "nav.about": "プロフィール",
@@ -298,7 +299,8 @@ window.XL_DICT = {
 "lang.en": "英語",
 "lang.zh": "中国語",
 "lang.ja": "日本語",
-"band.honours": "<span class=\"n\">05</span>受賞歴"
+"band.honours": "<span class=\"n\">05</span>受賞歴",
+"ui.showAllProjects": "全{n}件のプロジェクトを表示"
 }
 };
 

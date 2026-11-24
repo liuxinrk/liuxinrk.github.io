@@ -46,7 +46,7 @@
     var moreBtn = document.getElementById('pub-more');
     var empty = document.getElementById('pub-empty');
     var rows = Array.prototype.slice.call(pubList.children);
-    var LIMIT = 8;
+    var LIMIT = 5;
     var expanded = false;
     function apply() {
       var term = (q.value || '').trim().toLowerCase();
@@ -77,7 +77,7 @@
     var panel = document.getElementById(tab.getAttribute('aria-controls'));
     var list = panel.querySelector('.rows');
     var btn = panel.querySelector('.more .btn');
-    var ctl = limitList(list, 8, btn);
+    var ctl = limitList(list, 5, btn);
     tab.addEventListener('click', function () {
       tabs.forEach(function (t) {
         var sel = t === tab;
@@ -91,5 +91,9 @@
   // news
   var news = document.getElementById('news-list');
   if (news) limitList(news, 8, document.getElementById('news-more'));
+
+  // projects
+  var proj = document.getElementById('proj-list');
+  if (proj) limitList(proj, 5, document.getElementById('proj-more'));
 
 })();
