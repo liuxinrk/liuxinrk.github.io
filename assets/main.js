@@ -80,20 +80,4 @@
   var news = document.getElementById('news-list');
   if (news) limitList(news, 8, document.getElementById('news-more'));
 
-  // preview-only colour switch
-  var sw = document.querySelector('.theme-switch');
-  if (sw) {
-    var root = document.documentElement;
-    var saved = null;
-    try { saved = localStorage.getItem('xl-theme'); } catch (e) {}
-    function setTheme(t) {
-      if (t === 'green') root.setAttribute('data-theme', 'green'); else root.removeAttribute('data-theme');
-      Array.prototype.forEach.call(sw.querySelectorAll('button'), function (b) {
-        b.setAttribute('aria-pressed', b.dataset.theme === (t || 'navy') ? 'true' : 'false');
-      });
-      try { localStorage.setItem('xl-theme', t || 'navy'); } catch (e) {}
-    }
-    setTheme(saved);
-    sw.addEventListener('click', function (e) { if (e.target.dataset.theme) setTheme(e.target.dataset.theme); });
-  }
 })();
