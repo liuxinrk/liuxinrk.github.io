@@ -82,7 +82,6 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .hero .btn-ghost:hover { background: rgba(255, 255, 255, .12); border-color: #fff; color: #fff; }
 .portrait-wrap { justify-self: center; margin: 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .portrait-cap { display: flex; flex-direction: column; align-items: center; gap: 2px; margin-top: 22px; }
-.portrait-cap .role { font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-soft); }
 .portrait-cap .field { font: 400 1.5rem/1.25 var(--serif); color: #fff; }
 .portrait-cap .org { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: #c9e2d6; }
 .portrait-cap .coords { margin-top: 6px; font: .7rem var(--mono); color: #9fc4b3; }
@@ -256,7 +255,6 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .hero-grid, .about-grid, .career-grid { grid-template-columns: 1fr; }
   .portrait-wrap { justify-self: start; order: -1; flex-direction: row; align-items: center; gap: 22px; text-align: left; }
   .portrait-cap { align-items: flex-start; margin-top: 0; }
-  .portrait-cap .role { display: none; }
   .portrait { width: 240px; }
     .metrics .wrap { grid-template-columns: repeat(2, 1fr); }
   .metrics .m-label { grid-column: 1 / -1; padding: 26px 0 6px; }
