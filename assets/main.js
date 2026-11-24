@@ -90,7 +90,7 @@
 
   // news
   var news = document.getElementById('news-list');
-  if (news) limitList(news, 8, document.getElementById('news-more'));
+  if (news) limitList(news, 5, document.getElementById('news-more'));
 
   // projects
   var proj = document.getElementById('proj-list');
