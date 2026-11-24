@@ -354,10 +354,10 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .site-nav { margin-left: auto; }
 .lang-switch { display: flex; gap: 6px; flex: none; }
 .lang-switch { gap: 8px; }
-.lang-switch button { width: 30px; height: 30px; border-radius: 50%; border: 0; padding: 0; overflow: hidden; background: var(--card); cursor: pointer; box-shadow: 0 0 0 1px rgba(21, 23, 19, .18); transition: transform .16s ease, box-shadow .16s ease; }
+.lang-switch button { width: 25px; height: 25px; border-radius: 50%; border: 0; padding: 0; overflow: hidden; background: var(--card); cursor: pointer; box-shadow: 0 0 0 1px rgba(21, 23, 19, .18); transition: transform .16s ease, box-shadow .16s ease; }
 .lang-switch button svg { display: block; width: 100%; height: 100%; }
 .lang-switch button:hover { transform: translateY(-1px); box-shadow: 0 0 0 2px var(--gold-soft); }
-.lang-switch button[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--gold); }
+.lang-switch button[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--paper), 0 0 0 3.5px var(--gold); }
 html[lang="ja"] { --sans: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", "Noto Sans CJK JP", Roboto, Arial, sans-serif;
   --serif: Georgia, "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif CJK JP", "Times New Roman", serif; }
 html[lang="zh-CN"] .hero h1, html[lang="ja"] .hero h1 { font-size: clamp(2rem, 4.4vw, 3.2rem); line-height: 1.25; }
@@ -372,7 +372,7 @@ html[lang="zh-CN"] .hl, html[lang="ja"] .hl { font-style: normal; }
   .nav-toggle { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; font-size: 0; }
   .nav-toggle::before { content: "☰"; font-size: 1.15rem; line-height: 1; }
   .lang-switch { gap: 8px; }
-  .lang-switch button { width: 28px; height: 28px; }
+  .lang-switch button { width: 24px; height: 24px; }
 }
 
 /* about: awards + languages column */
