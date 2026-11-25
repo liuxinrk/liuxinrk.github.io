@@ -395,3 +395,11 @@ html[lang="ja"] .contact h2 { font-size: clamp(1.25rem, 4.6vw, 2.4rem); }
   .pubs-note { text-align: left; }
   .pubs-note .nowrap { white-space: normal; }
 }
+
+/* projects: tabs like presentations, static rows */
+#projects .row::before { display: none; }
+#projects .row:hover > * { transform: none; }
+#projects .row { border-bottom-color: rgba(21, 23, 19, .16); }
+.row .body small { display: block; margin-top: 2px; font-size: .8rem; color: var(--muted); }
+.btn[hidden] { display: none; }
+.more:has(> .btn[hidden]) { display: none; }

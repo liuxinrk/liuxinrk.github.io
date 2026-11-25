@@ -71,29 +71,27 @@
     apply();
   }
 
-  // presentations: tabs, each panel limited
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
-  tabs.forEach(function (tab) {
-    var panel = document.getElementById(tab.getAttribute('aria-controls'));
-    var list = panel.querySelector('.rows');
-    var btn = panel.querySelector('.more .btn');
-    var ctl = limitList(list, 5, btn);
-    tab.addEventListener('click', function () {
-      tabs.forEach(function (t) {
-        var sel = t === tab;
-        t.setAttribute('aria-selected', sel ? 'true' : 'false');
-        document.getElementById(t.getAttribute('aria-controls')).hidden = !sel;
+  // tab groups (presentations, projects): each panel limited, groups independent
+  Array.prototype.forEach.call(document.querySelectorAll('.tabs'), function (group) {
+    var tabs = Array.prototype.slice.call(group.querySelectorAll('.tab'));
+    tabs.forEach(function (tab) {
+      var panel = document.getElementById(tab.getAttribute('aria-controls'));
+      var list = panel.querySelector('.rows');
+      var btn = panel.querySelector('.more .btn');
+      var ctl = limitList(list, 5, btn);
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) {
+          var sel = t === tab;
+          t.setAttribute('aria-selected', sel ? 'true' : 'false');
+          document.getElementById(t.getAttribute('aria-controls')).hidden = !sel;
+        });
+        ctl.reset();
       });
-      ctl.reset();
     });
   });
 
   // news
   var news = document.getElementById('news-list');
   if (news) limitList(news, 5, document.getElementById('news-more'));
-
-  // projects
-  var proj = document.getElementById('proj-list');
-  if (proj) limitList(proj, 5, document.getElementById('proj-more'));
 
 })();
