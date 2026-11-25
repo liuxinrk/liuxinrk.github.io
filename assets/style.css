@@ -408,3 +408,6 @@ html[lang="ja"] .contact h2 { font-size: clamp(1.25rem, 4.6vw, 2.4rem); }
 .kw-label { margin: 30px 0 0; }
 .chips.chips-kw { margin-top: 12px; }
 .chips.chips-review { margin-top: 12px; }
+.chips.chips-review li { padding: 0; }
+.chips-review a { display: block; padding: 4px 12px; border-radius: 999px; color: var(--primary); }
+.chips-review a:hover { text-decoration: none; background: var(--gold-pale); color: var(--primary); }
