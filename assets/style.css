@@ -426,3 +426,4 @@ html[lang="ja"] .contact h2 { font-size: clamp(1.25rem, 4.6vw, 2.4rem); }
 .site-header .bar { width: min(1280px, 100% - 48px); }
 .site-nav { gap: 17px; }
 .site-header .brand-sub { letter-spacing: .07em; }
+.sec-intro strong { font-weight: 600; color: var(--primary); }
