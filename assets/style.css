@@ -412,3 +412,12 @@ html[lang="ja"] .contact h2 { font-size: clamp(1.25rem, 4.6vw, 2.4rem); }
 .chips-review a { display: block; padding: 4px 12px; border-radius: 999px; color: var(--primary); }
 .chips-review a:hover { text-decoration: none; background: var(--gold-pale); color: var(--primary); }
 #news { padding-bottom: 24px; }
+
+/* news page */
+.news-page { padding-bottom: 72px; }
+.news-year { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 40px; padding: 36px 0; border-top: 1px solid var(--line); }
+.news-year h2 { margin: 0; font: 400 2rem/1.1 var(--serif); color: var(--primary); }
+.news-year .news li:last-child { border-bottom: 0; }
+@media (max-width: 980px) { .news-year { grid-template-columns: 1fr; gap: 10px; } }
+.site-header .brand-sub { white-space: nowrap; }
+@media (max-width: 1200px) { .site-header .brand-sub { display: none; } }

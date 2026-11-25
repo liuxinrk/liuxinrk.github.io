@@ -90,8 +90,5 @@
     });
   });
 
-  // news
-  var news = document.getElementById('news-list');
-  if (news) limitList(news, 5, document.getElementById('news-more'));
 
 })();

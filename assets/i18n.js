@@ -151,7 +151,13 @@ window.XL_DICT = {
 "lang.ja": "日语",
 "band.honours": "<span class=\"n\">05</span>荣誉与奖项",
 "ui.showAllProjects": "显示全部 {n} 个项目",
-"research.keywords": "关键词"
+"research.keywords": "关键词",
+"nav.news": "动态",
+"newst.all": "全部 55 条动态 <span aria-hidden=\"true\">→</span>",
+"newsp.eyebrow": "动态",
+"newsp.title": "近期<span class=\"hl\">动态</span>",
+"newsp.count": "共 55 条 · 2021–2026",
+"page.news": "动态 | 刘鑫 Xin Liu"
 },
 "ja": {
 "nav.about": "プロフィール",
@@ -302,7 +308,13 @@ window.XL_DICT = {
 "lang.ja": "日本語",
 "band.honours": "<span class=\"n\">05</span>受賞歴",
 "ui.showAllProjects": "全{n}件のプロジェクトを表示",
-"research.keywords": "キーワード"
+"research.keywords": "キーワード",
+"nav.news": "ニュース",
+"newst.all": "全55件のニュース <span aria-hidden=\"true\">→</span>",
+"newsp.eyebrow": "ニュース",
+"newsp.title": "最近の<span class=\"hl\">活動</span>",
+"newsp.count": "全55件 · 2021–2026",
+"page.news": "ニュース | 刘鑫 Xin Liu"
 }
 };
 
