@@ -420,4 +420,9 @@ html[lang="ja"] .contact h2 { font-size: clamp(1.25rem, 4.6vw, 2.4rem); }
 .news-year .news li:last-child { border-bottom: 0; }
 @media (max-width: 980px) { .news-year { grid-template-columns: 1fr; gap: 10px; } }
 .site-header .brand-sub { white-space: nowrap; }
-@media (max-width: 1200px) { .site-header .brand-sub { display: none; } }
+@media (max-width: 1279px) { .site-header .brand-sub { display: none; } }
+
+/* header: room for the longer subtitle */
+.site-header .bar { width: min(1280px, 100% - 48px); }
+.site-nav { gap: 17px; }
+.site-header .brand-sub { letter-spacing: .07em; }
