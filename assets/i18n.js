@@ -157,7 +157,8 @@ window.XL_DICT = {
 "newsp.eyebrow": "动态",
 "newsp.title": "近期<span class=\"hl\">动态</span>",
 "newsp.count": "共 55 条 · 2021–2026",
-"page.news": "动态 | 刘鑫 Xin Liu"
+"page.news": "动态 | 刘鑫 Xin Liu",
+"hero.btnNews": "动态 <span aria-hidden=\"true\">→</span>"
 },
 "ja": {
 "nav.about": "プロフィール",
@@ -314,7 +315,8 @@ window.XL_DICT = {
 "newsp.eyebrow": "ニュース",
 "newsp.title": "最近の<span class=\"hl\">活動</span>",
 "newsp.count": "全55件 · 2021–2026",
-"page.news": "ニュース | 刘鑫 Xin Liu"
+"page.news": "ニュース | 刘鑫 Xin Liu",
+"hero.btnNews": "ニュース <span aria-hidden=\"true\">→</span>"
 }
 };
 
